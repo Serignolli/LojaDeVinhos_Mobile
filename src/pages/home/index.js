@@ -31,6 +31,9 @@ export default function Home(){
                         <Itens img={require('../assets/vinho2.webp')} cost='R$684,89' onClick={()=> navigation.navigate('Detail')}>
                             Vinho bla bla bla
                         </Itens>
+                    </View>
+                    
+                    <View style={styles.itens}>
                         <Itens img={require('../assets/vinho3.jpg')} cost='R$684,89' onClick={()=> navigation.navigate('Detail')}>
                             Vinho bla
                         </Itens>
@@ -38,6 +41,7 @@ export default function Home(){
                             Vinho bla bla bla bla
                         </Itens>
                     </View>
+
                 </ScrollView>
             </View>
         </View>
