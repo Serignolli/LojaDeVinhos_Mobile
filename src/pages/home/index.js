@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native';
 import React from "react";
 import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
 
@@ -5,6 +6,7 @@ import Itens from '../componets/Itens';
 
 
 export default function Home(){
+    const navigation = useNavigation();
     return(
         <View style={styles.container}>
             <View style={styles.header}>
@@ -22,7 +24,7 @@ export default function Home(){
                 <ScrollView>
                     <Text>Promoção</Text>
 
-                    <View style={style.itens}>
+                    <View style={styles.itens}>
                         <Itens img={require('../assets/vinho1.webp')} cost='R$684,89' onClick={()=> navigation.navigate('Detail')}>
                             Vinho bla bla
                         </Itens>
