@@ -1,13 +1,11 @@
 import React from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
-export default function Button(props){
+export default function Button(){
     return(
         <View style={styles.container}>
             <TouchableOpacity style={styles.btnContainer}>
-                <Text style={styles.text}>
-                    {props.children}
-                </Text>
+                <Text style={styles.title}>COMPRAR</Text>
             </TouchableOpacity>
         </View>
     );
@@ -19,18 +17,16 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     },
     btnContainer:{
-        width: '30%',
+        width: '80%',
         height: 50,
-        backgroundColor: '#FFF',
-        borderWidth: 2,
-        borderColor: '#17181a',
+        backgroundColor: '#17181a',
         borderRadius: 5,
         marginVertical: '5%',
         alignItems: 'center',
         justifyContent: 'center'
     },
-    text:{
+    title:{
         fontSize: 17,
-        color: '#17181a'
+        color: '#FFF'
     }
 });

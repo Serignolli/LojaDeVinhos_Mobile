@@ -2,6 +2,7 @@ import { useNavigation } from '@react-navigation/native';
 import React from "react";
 import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
 
+import Button from '../componets/Button';
 import Itens from '../componets/Itens';
 
 import vinho from '../objects/item.json';
@@ -31,14 +32,22 @@ export default function Home(){
                 style={styles.image}
                 />
 
+                
                 <View style={styles.textContainer}>
                     <Text style={styles.text}>Sua melhor loja de vinhos</Text>
                 </View>
 
-                <ScrollView>
-                    <Text>Promoção</Text>
+                <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+                    <Button>
+                        Opt 1
+                    </Button>
+                    <Button>
+                        Opt 1
+                    </Button>
+                </ScrollView>
 
-                    <View style={styles.itens}>
+                <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+                    <Text style={styles.text}>Promoção</Text>
                         <Itens
                             item={vinho1}
                             img={vinhoImg1}
@@ -52,9 +61,7 @@ export default function Home(){
                             onClick={() => navigateToDetail(vinho2, vinhoImg2)}>
                             {vinho2.nome}
                         </Itens>
-                    </View>
-                    
-                    <View style={styles.itens}>
+
                         <Itens
                             item={vinho3}
                             img={vinhoImg3}
@@ -67,9 +74,42 @@ export default function Home(){
                             onClick={() => navigateToDetail(vinho4, vinhoImg4)}>
                             {vinho4.nome}
                         </Itens>
-                    </View>
-
                 </ScrollView>
+
+                <View style={styles.line}></View>
+
+                <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+                    <Text style={styles.text}>Lançamentos</Text>
+                        <Itens
+                            item={vinho1}
+                            img={vinhoImg1}
+                            onClick={() => navigateToDetail(vinho1, vinhoImg1)}>
+                            {vinho1.nome}
+                        </Itens>
+
+                        <Itens
+                            item={vinho2}
+                            img={vinhoImg2}
+                            onClick={() => navigateToDetail(vinho2, vinhoImg2)}>
+                            {vinho2.nome}
+                        </Itens>
+
+                        <Itens
+                            item={vinho3}
+                            img={vinhoImg3}
+                            onClick={() => navigateToDetail(vinho3, vinhoImg3)}>
+                            {vinho3.nome}
+                        </Itens>
+                        <Itens
+                            item={vinho4}
+                            img={vinhoImg4}
+                            onClick={() => navigateToDetail(vinho4, vinhoImg4)}>
+                            {vinho4.nome}
+                        </Itens>
+                </ScrollView>
+
+                <View style={styles.line}></View>
+
             </View>
         </View>
     );
@@ -98,8 +138,9 @@ const styles = StyleSheet.create({
         fontSize: 26,
         marginHorizontal: '1%'
     },
-    itens:{
-        flexDirection:'row',
-        justifyContent:'space-around'
+    Line:{
+        borderWidth: 1,
+        borderBottomColor: '#DDD',
+        marginVertical: '2%'
     }
 });

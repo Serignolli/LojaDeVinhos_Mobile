@@ -1,7 +1,7 @@
 import React, { useLayoutEffect } from 'react';
 import { Image, ScrollView, StyleSheet, Text, View } from 'react-native';
 
-import Button from '../componets/Button';
+import Button from '../componets/BuyButton';
 import Footer from '../componets/Footer';
 
 export default function Detail({ route, navigation }) {
