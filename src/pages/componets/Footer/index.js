@@ -27,8 +27,7 @@ export default function Footer(){
             <Text style={styles.title}>VOCÊ TAMBÉM PODE GOSTAR</Text>
 
             <View>
-                <ScrollView horizontal showsHorizontalScrollIndicator={true}>
-                    <View style={{marginHorizontal: 10}}>
+                <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{marginHorizontal: 10}}>
                         <Itens
                             item={vinho1}
                             img={vinhoImg1}
@@ -55,7 +54,6 @@ export default function Footer(){
                             onClick={() => navigateToDetail(vinho4, vinhoImg4)}>
                             {vinho4.nome}
                         </Itens>
-                    </View>
                 </ScrollView>
             </View>
         </View>
