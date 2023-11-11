@@ -1,45 +1,60 @@
-import React from "react";
+import React, { useLayoutEffect } from 'react';
 import { Image, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 import Button from '../componets/Button';
 import Footer from '../componets/Footer';
 
-export default function Detail({ navigation }){
+export default function Detail({ route, navigation }) {
 
-    navigation.setOptions({
-        headerTitle:  'Vinho bla bla'
-    })
+    //Pega dados do item passado por parâmetro no navigateToDetail
+    const { item, imagem } = route.params || {};
+
+    //Aplica nome no título da página
+    useLayoutEffect(() => {
+      if (item) {
+        navigation.setOptions({
+          headerTitle: item.nome,
+        });
+      }
+    }, [navigation, item]);
+
+    //Verifica se existem itens passados por parâmetro
+    if (!item || !imagem) {
+        return (
+          <View>
+            <Text>Nenhum item ou imagem encontrada.</Text>
+          </View>
+        );
+      }
+
     return(
         <ScrollView style={styles.container}>
             <Image
-            source={require('../assets/vinho1.webp')}
+            source={imagem}
             style={styles.image}
             />
 
             <View>
                 <View>
-                    <Text style={[styles.title, {fontSize:24}]}>R$123,45</Text>
+                    <Text style={[styles.title, {fontSize:24}]}>{item.cost}</Text>
                 </View>
                 <View opacity={0.4}>
-                    <Text style={[styles.title, {fontSize:30}]}>Nome do produto</Text>
+                    <Text style={[styles.title, {fontSize:30}]}>{item.nome}</Text>
                 </View>
             </View>
 
             <View style={styles.textContent}>
                 <Text style={styles.textTitle}>
-                    Nome vinho
+                    {item.nome}
                 </Text>
                 <Text style={styles.textContent}>
-                    Descrição do vinho
-                    aaaaaaaaaaaaaaaaaaa
-                    aaaaaaaaaaaaaaaaaaaa
-                    aaaaaaaaaaaaaaaaaaaaa
+                    Descrição: {item.desc}
                 </Text>
                 <Text style={styles.textList}>
-                    Ano - 1256
+                    Ano - {item.ano}
                 </Text>
                 <Text style={styles.textList}>
-                    Nacionalidade - Konoha
+                    Nacionalidade - {item.nacionalidade}
                 </Text>
             </View>
 
@@ -79,6 +94,7 @@ const styles = StyleSheet.create({
     textList:{
         fontSize: 16,
         lineHeight: 25,
+        paddingHorizontal: '2%'
     },
     Line:{
         borderWidth: 1,

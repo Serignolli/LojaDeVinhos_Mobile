@@ -9,20 +9,20 @@ function filtroDesc(desc){
     return `${desc.substring(0, 22)}...`;
 }
 
-export default function Itens(props){
+export default function Itens( {item, onClick, img} ){
     return(
         <View>
-            <TouchableOpacity style={styles.container} onPress={props.onClick}>
+            <TouchableOpacity style={styles.container} onPress={onClick}>
                 <Image
-                source={props.img}
-                style={styles.itemImg}
+                    source={img}
+                    style={styles.itemImg}
                 />
                 <Text style={styles.itemText}>
-                    {filtroDesc(props.children)}
+                    {filtroDesc(item.nome)}
                 </Text>
                 <View opacity={0.4}>
                     <Text style={styles.itemText}>
-                        {props.cost}
+                        {item.cost}
                     </Text>
                 </View>
             </TouchableOpacity>

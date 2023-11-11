@@ -1,0 +1,42 @@
+{
+    "vinho1": {
+        "nome": "Vinho1",
+        "img": "./assets/vinho1.webp",
+        "cost": "R$v1",
+        "desc": "Descrição  vinho1",
+        "ano": "Ano vinho1",
+        "nacionalidade":  "Nacionalidadde vinho1"
+    },
+    "vinho2": {
+        "nome": "Vinho2",
+        "img": "./assets/vinho2.webp",
+        "cost": "R$v2",
+        "desc": "Descrição  vinho2",
+        "ano": "Ano vinho2",
+        "nacionalidade":  "Nacionalidadde vinho2"
+    },
+    "vinho3": {
+        "nome": "Vinho3",
+        "img": "./assets/vinho3.jpg",
+        "cost": "R$v3",
+        "desc": "Descrição  vinho3",
+        "ano": "Ano vinho3",
+        "nacionalidade":  "Nacionalidadde vinho3"
+    },
+    "vinho4": {
+        "nome": "Vinho4",
+        "img": "./assets/vinho4.webp",
+        "cost": "R$v4",
+        "desc": "Descrição  vinho4",
+        "ano": "Ano vinho4",
+        "nacionalidade":  "Nacionalidadde vinho4"
+    },
+    "vinho5": {
+        "nome": "Vinho5",
+        "img": "./assets/vinho5.webp",
+        "cost": "R$v5",
+        "desc": "Descrição  vinho5",
+        "ano": "Ano vinho5",
+        "nacionalidade":  "Nacionalidadde vinho5"
+    }
+}
