@@ -1,8 +1,7 @@
 import { useNavigation } from '@react-navigation/native';
 import React from "react";
-import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
 
-import Button from '../componets/Button';
 import Itens from '../componets/Itens';
 
 import vinho from '../objects/item.json';
@@ -13,7 +12,7 @@ import vinhoImg3 from '../assets/vinho3.jpg';
 import vinhoImg4 from '../assets/vinho4.webp';
 
 
-export default function Home(){
+export default function Nationality(){
     const navigation = useNavigation();
     const navigateToDetail = (item, imagem) => {
         navigation.navigate('Detail', { item, imagem });
@@ -27,27 +26,13 @@ export default function Home(){
     return(
         <View style={styles.container}>
             <View style={styles.header}>
-                <Image
-                source={require('../assets/vinhos_banner.jpg')}
-                style={styles.image}
-                />
-
-                
                 <View style={styles.textContainer}>
-                    <Text style={styles.text}>Sua melhor loja de vinhos</Text>
+                    <Text style={styles.text}>Vinhos por nacionalidade</Text>
                 </View>
+                <View style={styles.Headerline}></View>
 
                 <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-                    <Button onClick={() => navigation.navigate('Nationality')}>
-                        Nacionalidades
-                    </Button>
-                    <Button onClick={() => navigation.navigate('Harvest')}>
-                        Safras
-                    </Button>
-                </ScrollView>
-
-                <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-                    <Text style={styles.text}>Promoção</Text>
+                    <Text style={styles.text}>Chileno</Text>
                         <Itens
                             item={vinho1}
                             img={vinhoImg1}
@@ -79,7 +64,71 @@ export default function Home(){
                 <View style={styles.line}></View>
 
                 <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-                    <Text style={styles.text}>Lançamentos</Text>
+                    <Text style={styles.text}>Argentino</Text>
+                        <Itens
+                            item={vinho1}
+                            img={vinhoImg1}
+                            onClick={() => navigateToDetail(vinho1, vinhoImg1)}>
+                            {vinho1.nome}
+                        </Itens>
+
+                        <Itens
+                            item={vinho2}
+                            img={vinhoImg2}
+                            onClick={() => navigateToDetail(vinho2, vinhoImg2)}>
+                            {vinho2.nome}
+                        </Itens>
+
+                        <Itens
+                            item={vinho3}
+                            img={vinhoImg3}
+                            onClick={() => navigateToDetail(vinho3, vinhoImg3)}>
+                            {vinho3.nome}
+                        </Itens>
+                        <Itens
+                            item={vinho4}
+                            img={vinhoImg4}
+                            onClick={() => navigateToDetail(vinho4, vinhoImg4)}>
+                            {vinho4.nome}
+                        </Itens>
+                </ScrollView>
+
+                <View style={styles.line}></View>
+
+                <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+                    <Text style={styles.text}>Francês</Text>
+                        <Itens
+                            item={vinho1}
+                            img={vinhoImg1}
+                            onClick={() => navigateToDetail(vinho1, vinhoImg1)}>
+                            {vinho1.nome}
+                        </Itens>
+
+                        <Itens
+                            item={vinho2}
+                            img={vinhoImg2}
+                            onClick={() => navigateToDetail(vinho2, vinhoImg2)}>
+                            {vinho2.nome}
+                        </Itens>
+
+                        <Itens
+                            item={vinho3}
+                            img={vinhoImg3}
+                            onClick={() => navigateToDetail(vinho3, vinhoImg3)}>
+                            {vinho3.nome}
+                        </Itens>
+                        <Itens
+                            item={vinho4}
+                            img={vinhoImg4}
+                            onClick={() => navigateToDetail(vinho4, vinhoImg4)}>
+                            {vinho4.nome}
+                        </Itens>
+                </ScrollView>
+
+                <View style={styles.line}></View>
+
+                <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+                    <Text style={styles.text}>Espanhol</Text>
                         <Itens
                             item={vinho1}
                             img={vinhoImg1}
@@ -138,7 +187,13 @@ const styles = StyleSheet.create({
         fontSize: 26,
         marginHorizontal: '1%'
     },
-    Line:{
+    line:{
+        borderWidth: 1,
+        borderBottomColor: '#DDD',
+        marginVertical: '2%'
+    },
+    Headerline:{
+        width: '80%',
         borderWidth: 1,
         borderBottomColor: '#DDD',
         marginVertical: '2%'
