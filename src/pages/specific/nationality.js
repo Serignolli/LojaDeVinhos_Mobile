@@ -18,6 +18,10 @@ export default function Nationality(){
         navigation.navigate('Detail', { item, imagem });
     };
 
+    navigation.setOptions({
+        headerTitle: 'Nacionalidades'
+    });
+
     const vinho1 = vinho.vinho1;
     const vinho2 = vinho.vinho2;
     const vinho3 = vinho.vinho3;
