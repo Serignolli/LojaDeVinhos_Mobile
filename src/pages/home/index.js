@@ -38,78 +38,80 @@ export default function Home(){
                 </View>
 
                 <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-                    <Button onClick={() => navigation.navigate('Nationality')}>
-                        Nacionalidades
-                    </Button>
-                    <Button onClick={() => navigation.navigate('Harvest')}>
-                        Safras
-                    </Button>
+                        <Button onClick={() => navigation.navigate('Nationality')}>
+                            Nacionalidades
+                        </Button>
+                        <Button onClick={() => navigation.navigate('Harvest')}>
+                            Safras
+                        </Button>
                 </ScrollView>
 
-                <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+                <ScrollView showsVerticalScrollIndicator={false}>
                     <Text style={styles.text}>Promoção</Text>
-                        <Itens
-                            item={vinho1}
-                            img={vinhoImg1}
-                            onClick={() => navigateToDetail(vinho1, vinhoImg1)}>
-                            {vinho1.nome}
-                        </Itens>
+                    <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+                            <Itens
+                                item={vinho1}
+                                img={vinhoImg1}
+                                onClick={() => navigateToDetail(vinho1, vinhoImg1)}>
+                                {vinho1.nome}
+                            </Itens>
 
-                        <Itens
-                            item={vinho2}
-                            img={vinhoImg2}
-                            onClick={() => navigateToDetail(vinho2, vinhoImg2)}>
-                            {vinho2.nome}
-                        </Itens>
+                            <Itens
+                                item={vinho2}
+                                img={vinhoImg2}
+                                onClick={() => navigateToDetail(vinho2, vinhoImg2)}>
+                                {vinho2.nome}
+                            </Itens>
 
-                        <Itens
-                            item={vinho3}
-                            img={vinhoImg3}
-                            onClick={() => navigateToDetail(vinho3, vinhoImg3)}>
-                            {vinho3.nome}
-                        </Itens>
-                        <Itens
-                            item={vinho4}
-                            img={vinhoImg4}
-                            onClick={() => navigateToDetail(vinho4, vinhoImg4)}>
-                            {vinho4.nome}
-                        </Itens>
-                </ScrollView>
+                            <Itens
+                                item={vinho3}
+                                img={vinhoImg3}
+                                onClick={() => navigateToDetail(vinho3, vinhoImg3)}>
+                                {vinho3.nome}
+                            </Itens>
+                            <Itens
+                                item={vinho4}
+                                img={vinhoImg4}
+                                onClick={() => navigateToDetail(vinho4, vinhoImg4)}>
+                                {vinho4.nome}
+                            </Itens>
+                    </ScrollView>
 
-                <View style={styles.line}></View>
+                    <View style={styles.line}></View>
 
-                <ScrollView horizontal showsHorizontalScrollIndicator={false}>
                     <Text style={styles.text}>Lançamentos</Text>
-                        <Itens
-                            item={vinho1}
-                            img={vinhoImg1}
-                            onClick={() => navigateToDetail(vinho1, vinhoImg1)}>
-                            {vinho1.nome}
-                        </Itens>
+                    <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+                            <Itens
+                                item={vinho1}
+                                img={vinhoImg1}
+                                onClick={() => navigateToDetail(vinho1, vinhoImg1)}>
+                                {vinho1.nome}
+                            </Itens>
 
-                        <Itens
-                            item={vinho2}
-                            img={vinhoImg2}
-                            onClick={() => navigateToDetail(vinho2, vinhoImg2)}>
-                            {vinho2.nome}
-                        </Itens>
+                            <Itens
+                                item={vinho2}
+                                img={vinhoImg2}
+                                onClick={() => navigateToDetail(vinho2, vinhoImg2)}>
+                                {vinho2.nome}
+                            </Itens>
 
-                        <Itens
-                            item={vinho3}
-                            img={vinhoImg3}
-                            onClick={() => navigateToDetail(vinho3, vinhoImg3)}>
-                            {vinho3.nome}
-                        </Itens>
-                        <Itens
-                            item={vinho4}
-                            img={vinhoImg4}
-                            onClick={() => navigateToDetail(vinho4, vinhoImg4)}>
-                            {vinho4.nome}
-                        </Itens>
+                            <Itens
+                                item={vinho3}
+                                img={vinhoImg3}
+                                onClick={() => navigateToDetail(vinho3, vinhoImg3)}>
+                                {vinho3.nome}
+                            </Itens>
+                            <Itens
+                                item={vinho4}
+                                img={vinhoImg4}
+                                onClick={() => navigateToDetail(vinho4, vinhoImg4)}>
+                                {vinho4.nome}
+                            </Itens>
+                    </ScrollView>
+
+                    <View style={styles.line}></View>
+
                 </ScrollView>
-
-                <View style={styles.line}></View>
-
             </View>
         </View>
     );
@@ -131,12 +133,15 @@ const styles = StyleSheet.create({
     textContainer:{
         flexDirection:'row',
         marginVertical:'5%',
-        marginHorizontal:'5%'
+        marginHorizontal:'5%',
+        marginLeft: '5%',
+        marginRight: '5%'
     },
     text:{
         fontFamily:'Inter_400Regular',
         fontSize: 26,
-        marginHorizontal: '1%'
+        marginHorizontal: '1%',
+        marginTop: '5%'
     },
     Line:{
         borderWidth: 1,

@@ -35,8 +35,8 @@ export default function Harvest(){
                 </View>
                 <View style={styles.Headerline}></View>
 
+                <Text style={styles.text}>2010 - 2020</Text>
                 <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-                    <Text style={styles.text}>2010 - 2020</Text>
                         <Itens
                             item={vinho1}
                             img={vinhoImg1}
@@ -67,8 +67,8 @@ export default function Harvest(){
 
                 <View style={styles.line}></View>
 
+                <Text style={styles.text}>2000 - 2010</Text>
                 <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-                    <Text style={styles.text}>2000 - 2010</Text>
                         <Itens
                             item={vinho1}
                             img={vinhoImg1}
@@ -99,8 +99,8 @@ export default function Harvest(){
 
                 <View style={styles.line}></View>
 
+                <Text style={styles.text}>1990 - 2000</Text>
                 <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-                    <Text style={styles.text}>1990 - 2000</Text>
                         <Itens
                             item={vinho1}
                             img={vinhoImg1}
@@ -131,8 +131,8 @@ export default function Harvest(){
 
                 <View style={styles.line}></View>
 
+                <Text style={styles.text}>1980 - 1990</Text>
                 <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-                    <Text style={styles.text}>1980 - 1990</Text>
                         <Itens
                             item={vinho1}
                             img={vinhoImg1}
@@ -197,7 +197,6 @@ const styles = StyleSheet.create({
         marginVertical: '2%'
     },
     Headerline:{
-        width: '80%',
         borderWidth: 1,
         borderBottomColor: '#DDD',
         marginVertical: '2%'

@@ -35,8 +35,8 @@ export default function Nationality(){
                 </View>
                 <View style={styles.Headerline}></View>
 
+                <Text style={styles.text}>Chileno</Text>
                 <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-                    <Text style={styles.text}>Chileno</Text>
                         <Itens
                             item={vinho1}
                             img={vinhoImg1}
@@ -67,8 +67,8 @@ export default function Nationality(){
 
                 <View style={styles.line}></View>
 
+                <Text style={styles.text}>Argentino</Text>
                 <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-                    <Text style={styles.text}>Argentino</Text>
                         <Itens
                             item={vinho1}
                             img={vinhoImg1}
@@ -99,8 +99,8 @@ export default function Nationality(){
 
                 <View style={styles.line}></View>
 
+                <Text style={styles.text}>Francês</Text>
                 <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-                    <Text style={styles.text}>Francês</Text>
                         <Itens
                             item={vinho1}
                             img={vinhoImg1}
@@ -131,8 +131,8 @@ export default function Nationality(){
 
                 <View style={styles.line}></View>
 
+                <Text style={styles.text}>Espanhol</Text>
                 <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-                    <Text style={styles.text}>Espanhol</Text>
                         <Itens
                             item={vinho1}
                             img={vinhoImg1}
@@ -197,7 +197,6 @@ const styles = StyleSheet.create({
         marginVertical: '2%'
     },
     Headerline:{
-        width: '80%',
         borderWidth: 1,
         borderBottomColor: '#DDD',
         marginVertical: '2%'
