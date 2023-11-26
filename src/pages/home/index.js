@@ -37,14 +37,14 @@ export default function Home(){
                     <Text style={styles.text}>Sua melhor loja de vinhos</Text>
                 </View>
 
-                <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+                <View style={styles.buttons}>
                         <Button onClick={() => navigation.navigate('Nationality')}>
                             Nacionalidades
                         </Button>
                         <Button onClick={() => navigation.navigate('Harvest')}>
                             Safras
                         </Button>
-                </ScrollView>
+                </View>
 
                 <ScrollView showsVerticalScrollIndicator={false}>
                     <Text style={styles.text}>Promoção</Text>
@@ -125,6 +125,11 @@ const styles = StyleSheet.create({
     },
     header:{
         marginBottom:8
+    },
+    buttons:{
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      marginHorizontal: '20%'
     },
     image:{
         width:'100%',

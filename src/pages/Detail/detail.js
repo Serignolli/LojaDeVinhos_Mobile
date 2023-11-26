@@ -6,10 +6,8 @@ import Footer from '../componets/Footer';
 
 export default function Detail({ route, navigation }) {
 
-    //Pega dados do item passado por parâmetro no navigateToDetail
     const { item, imagem } = route.params || {};
 
-    //Aplica nome no título da página
     useLayoutEffect(() => {
       if (item) {
         navigation.setOptions({
@@ -18,14 +16,17 @@ export default function Detail({ route, navigation }) {
       }
     }, [navigation, item]);
 
-    //Verifica se existem itens passados por parâmetro
     if (!item || !imagem) {
         return (
           <View>
             <Text>Nenhum item ou imagem encontrada.</Text>
           </View>
         );
-      }
+    }
+
+    const navigateToPurchase = () => {
+      navigation.navigate('Purchase', {item, imagem});
+    };
 
     return(
         <ScrollView style={styles.container}>
@@ -58,7 +59,7 @@ export default function Detail({ route, navigation }) {
                 </Text>
             </View>
 
-            <Button/>
+            <Button onClick={() => navigateToPurchase()}/>
 
             <View style={styles.line}></View>
 

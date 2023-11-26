@@ -2,9 +2,9 @@ import React from "react";
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 function filtroDesc(desc){
-    if(desc.length < 27){
-        return desc;
-    }
+  if(desc.length < 27){
+      return desc;
+  }
 
     return `${desc.substring(0, 22)}...`;
 }

@@ -4,6 +4,9 @@ import React from "react";
 
 import Detail from "./pages/Detail/detail";
 import Home from "./pages/Home";
+import PaymentSuccess from "./pages/PaymentSuccess/PaymentSuccess";
+import Payment from "./pages/payment/payment";
+import Purchase from "./pages/purchase/purchase";
 import Harvest from "./pages/specific/harvest";
 import Nationality from "./pages/specific/nationality";
 
@@ -31,6 +34,21 @@ function Routes(){
                 <stack.Screen
                 name="Harvest"
                 component={Harvest}
+                option={{headerShows: false}}
+                />
+                <stack.Screen
+                name="Purchase"
+                component={Purchase}
+                option={{headerShows: false}}
+                />
+                <stack.Screen
+                name="Payment"
+                component={Payment}
+                option={{headerShows: false}}
+                />
+                <stack.Screen
+                name="PaymentSuccess"
+                component={PaymentSuccess}
                 option={{headerShows: false}}
                 />
             </stack.Navigator>

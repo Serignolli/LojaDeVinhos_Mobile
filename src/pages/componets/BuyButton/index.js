@@ -1,10 +1,10 @@
 import React from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
-export default function Button(){
+export default function Button({ onClick }){
     return(
         <View style={styles.container}>
-            <TouchableOpacity style={styles.btnContainer}>
+            <TouchableOpacity style={styles.btnContainer} onPress={onClick}>
                 <Text style={styles.title}>COMPRAR</Text>
             </TouchableOpacity>
         </View>
